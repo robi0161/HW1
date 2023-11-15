@@ -6,11 +6,11 @@
   <title>Favorite Athletes</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
 <body>
   <h1>Favorite Athletes</h1>
 
   <button onclick="document.getElementById('demo').innerHTML=Date()">Time?</button>
-
 
   <p id="demo"></p>
 
@@ -50,20 +50,16 @@
       </tr>
     </tbody>
   </table>
-   
-<script>
+
+  <script>
     // Example jQuery code
     $(document).ready(function(){
-        // Your jQuery code here
         // Add a click event to table rows
         $('tbody tr').click(function() {
-            // Toggle a class to highlight the selected row
+            // Change background color on click
             $(this).toggleClass('selected');
         });
     });
   </script>
-
-
-
 </body>
 </html>
