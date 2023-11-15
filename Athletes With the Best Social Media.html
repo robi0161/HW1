@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Favorite Athletes</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
-
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21"></script>
 </head>
 <body>
   <h1>Favorite Athletes</h1>
  
   <button onclick="document.getElementById('demo').innerHTML=Date()">Time?</button>
-
+  <button onclick="shuffleAthletes()">Shuffle Athletes</button>
   <p id="demo"></p>
 
   <table class="table">
@@ -50,7 +50,21 @@
       </tr>
     </tbody>
   </table>
-  
+ 
+  <script>
+    // Shuffle the order of athletes in the table
+    function shuffleAthletes() {
+      var rows = document.querySelectorAll('tbody tr');
+      var shuffledRows = _.shuffle(Array.from(rows));
+
+      var tbody = document.querySelector('tbody');
+      tbody.innerHTML = '';
+
+      shuffledRows.forEach(function(row) {
+        tbody.appendChild(row);
+      });
+    }
+  </script>
 
 </body>
 </html>
