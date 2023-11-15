@@ -10,7 +10,6 @@
   <body>
     <div class="container">
     <h1>My Favorite Movies</h1>
-      <div id="movieChart"></div>
       <body>
 
 <p id="demo"></p>
@@ -99,43 +98,5 @@ function toCelsius(fahrenheit) {
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-
-<script>
-  // Wrap the D3.js code in a function that runs after the DOM has loaded
-  document.addEventListener("DOMContentLoaded", function () {
-    // Sample data for the chart
-    var moviesData = [
-      { name: "Black Panther", rating: 8.0 },
-      { name: "Us", rating: 7.4 },
-      { name: "Interstellar", rating: 8.6 },
-      { name: "Life Itself", rating: 6.7 }
-    ];
-
-    // Set up the SVG container using D3.js
-    var svg = d3.select("#movieChart").append("svg")
-      .attr("width", 400)
-      .attr("height", 200);
-
-    // Create the bars based on the data
-    svg.selectAll("rect")
-      .data(moviesData)
-      .enter().append("rect")
-      .attr("x", function (d, i) { return i * 100; })
-      .attr("y", function (d) { return 200 - d.rating * 10; })
-      .attr("width", 80)
-      .attr("height", function (d) { return d.rating * 10; })
-      .attr("fill", "steelblue");
-
-    // Add labels to the bars
-    svg.selectAll("text")
-      .data(moviesData)
-      .enter().append("text")
-      .text(function (d) { return d.rating; })
-      .attr("x", function (d, i) { return i * 100 + 40; })
-      .attr("y", function (d) { return 200 - d.rating * 10 - 5; }) // Adjusted y position for better placement
-      .attr("text-anchor", "middle")
-      .attr("fill", "white");
-  });
-</script>
   </body>
 </html>
