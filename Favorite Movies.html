@@ -24,7 +24,7 @@ function toCelsius(fahrenheit) {
 </script>
 
 </body>
-    <script>
+  <script>
   // Wrap the code in a function that runs after the DOM has loaded
   document.addEventListener("DOMContentLoaded", function () {
     // Sample data for the chart
@@ -35,12 +35,12 @@ function toCelsius(fahrenheit) {
       { name: "Life Itself", rating: 6.7 }
     ];
 
-    // Animation effect for movie cards using Anime.js
+    // Animation effect for every movie card using Anime.js
     anime({
       targets: '.card',
       translateX: [0, 20],
       opacity: [0, 1],
-      delay: anime.stagger(100),
+      delay: anime.stagger(100, { start: 300 }), // Delay each card animation
       easing: 'easeInOutQuad'
     });
 
