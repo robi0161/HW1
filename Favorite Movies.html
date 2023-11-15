@@ -99,20 +99,26 @@ function toCelsius(fahrenheit) {
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
-  <script>
+ <div id="movieChart"></div>
+
+<script>
+  // Wrap the D3.js code in a function that runs after the DOM has loaded
+  document.addEventListener("DOMContentLoaded", function () {
     // Sample data for the chart
     var moviesData = [
       { name: "Black Panther", rating: 8.0 },
       { name: "Us", rating: 7.4 },
-       { name: "Interstellar", rating: 8.6 },
+      { name: "Interstellar", rating: 8.6 },
       { name: "Life Itself", rating: 6.7 }
     ];
 
+    // Set up the SVG container using D3.js
     var svg = d3.select("#movieChart").append("svg")
       .attr("width", 400)
       .attr("height", 200);
 
-     svg.selectAll("rect")
+    // Create the bars based on the data
+    svg.selectAll("rect")
       .data(moviesData)
       .enter().append("rect")
       .attr("x", function (d, i) { return i * 100; })
@@ -121,7 +127,8 @@ function toCelsius(fahrenheit) {
       .attr("height", function (d) { return d.rating * 10; })
       .attr("fill", "steelblue");
 
-     svg.selectAll("text")
+    // Add labels to the bars
+    svg.selectAll("text")
       .data(moviesData)
       .enter().append("text")
       .text(function (d) { return d.rating; })
@@ -129,6 +136,7 @@ function toCelsius(fahrenheit) {
       .attr("y", function (d) { return 190 - d.rating * 10; })
       .attr("text-anchor", "middle")
       .attr("fill", "white");
-  </script>
+  });
+</script>
   </body>
 </html>
