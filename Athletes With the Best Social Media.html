@@ -10,16 +10,6 @@
 <body>
   <h1>Favorite Athletes</h1>
  
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script>
-    // Initialize Typed.js
-    var typed = new Typed('#typed-output', {
-      strings: ['Favorite Athletes'],
-      typeSpeed: 50,
-      showCursor: false,
-    });
-  </script>
-
   <button onclick="document.getElementById('demo').innerHTML=Date()">Time?</button>
 
   <p id="demo"></p>
@@ -60,7 +50,19 @@
       </tr>
     </tbody>
   </table>
-
+  
+   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    // Ensure the DOM is ready before executing scripts
+    document.addEventListener("DOMContentLoaded", function() {
+      // Initialize Typed.js
+      var typed = new Typed('#typed-output', {
+        strings: ['Favorite Athletes'],
+        typeSpeed: 50,
+        showCursor: false,
+      });
+    });
+  </script>
 
 </body>
 </html>
