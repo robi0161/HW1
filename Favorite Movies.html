@@ -100,7 +100,6 @@ function toCelsius(fahrenheit) {
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
-
 <script>
   // Wrap the D3.js code in a function that runs after the DOM has loaded
   document.addEventListener("DOMContentLoaded", function () {
@@ -133,7 +132,7 @@ function toCelsius(fahrenheit) {
       .enter().append("text")
       .text(function (d) { return d.rating; })
       .attr("x", function (d, i) { return i * 100 + 40; })
-      .attr("y", function (d) { return 190 - d.rating * 10; })
+      .attr("y", function (d) { return 200 - d.rating * 10 - 5; }) // Adjusted y position for better placement
       .attr("text-anchor", "middle")
       .attr("fill", "white");
   });
