@@ -51,11 +51,15 @@
     </tbody>
   </table>
    
-  <script>
+<script>
     // Example jQuery code
     $(document).ready(function(){
         // Your jQuery code here
-        $("body").append("<p>Hello, jQuery!</p>");
+        // Add a click event to table rows
+        $('tbody tr').click(function() {
+            // Toggle a class to highlight the selected row
+            $(this).toggleClass('selected');
+        });
     });
   </script>
 
