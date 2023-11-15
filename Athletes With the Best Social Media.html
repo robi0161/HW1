@@ -1,59 +1,66 @@
-<!doctype html>
-<table class="table">
-  <thead>
-     <h1>Favorite Athletes</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Favorite Athletes</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+</head>
 <body>
+  <h1>Favorite Athletes</h1>
 
-<button onclick="document.getElementById('demo').innerHTML=Date()">Time?</button>
-<button onclick="animateRows()">Animate Rows</button>
+  <button onclick="document.getElementById('demo').innerHTML=Date()">Time?</button>
+  <button onclick="animateRows()">Animate Rows</button>
 
-<p id="demo"></p>
+  <p id="demo"></p>
 
-</body>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>LeBron</td>
-      <td>James</td>
-      <td><a href="https://twitter.com/KingJames" class="card-link">LeBron James' Twitter</a></td>
-    </tr>
-    <tr>
-     <th scope="row">2</th>
-      <td>Paul</td>
-      <td>George</td>
-      <td><a href="https://twitter.com/Yg_Trece" class="card-link">Paul George's Twitter</a></td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Kevin</td>
-      <td>Durant</td>
-      <td><a href="https://twitter.com/KDTrey5" class="card-link">Kevin Durant's Twitter</a></td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>James</td>
-      <td>Harden</td>
-      <td><a href="https://twitter.com/JHarden13" class="card-link">James Harden's Twitter</a></td>
-    </tr>
-  </tbody>
-</table>
- <script>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>LeBron</td>
+        <td>James</td>
+        <td><a href="https://twitter.com/KingJames" class="card-link">LeBron James' Twitter</a></td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Paul</td>
+        <td>George</td>
+        <td><a href="https://twitter.com/Yg_Trece" class="card-link">Paul George's Twitter</a></td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Kevin</td>
+        <td>Durant</td>
+        <td><a href="https://twitter.com/KDTrey5" class="card-link">Kevin Durant's Twitter</a></td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td>James</td>
+        <td>Harden</td>
+        <td><a href="https://twitter.com/JHarden13" class="card-link">James Harden's Twitter</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
     // Function to animate table rows using Anime.js
     function animateRows() {
       anime({
         targets: 'tbody tr',
-        scale: [1, 1.2], // Scale each row from 1 to 1.2
+        backgroundColor: '#FFD700', // Change background color to gold
         duration: 1000, // Duration of the animation in milliseconds
         easing: 'easeInOutQuad', // Easing function
-        direction: 'alternate', // Alternate between scaling up and down
-        loop: 2 // Repeat the animation twice
+        delay: anime.stagger(100) // Stagger the start of each row animation
       });
     }
   </script>
