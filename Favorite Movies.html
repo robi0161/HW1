@@ -5,116 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    
   </head>
   <body>
     <div class="container">
-    <h1>My Favorite Movies</h1>
+      <h1>My Favorite Movies</h1>
       
-    <div id="movieChart"></div>
-      <body>
+      <div id="movieChart"></div>
 
-<p id="demo"></p>
+      <p id="demo"></p>
 
-<script>
-let text = "Fun fact, in the movie Intersteller, the black hole they travel through would be around " + toCelsius(-459.67) + " degrees Celsius.";
-document.getElementById("demo").innerHTML = text;
-
-function toCelsius(fahrenheit) {
-  return (5/9) * (fahrenheit-32);
-} 
-</script>
-
-</body>
-  <div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-      <strong>Black Panther</strong>
-      </button>
-    </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-       <div class="accordion-body"> 
-      <div class="card" style="width: 18rem;">
-  <img src="https://m.media-amazon.com/images/I/A1PaCX4oXjL.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-     <a href="https://www.youtube.com/watch?v=xjDjIWPwcPU" class="card-link">Trailer</a>
-    </div>
-  </div>
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        <strong>Us</strong>
-      </button>
-    </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
- <div class="card" style="width: 18rem;">
-  <img src="https://i.pinimg.com/originals/47/0e/ca/470eca41d7288183be8c39b6bdf952f4.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <a href="https://www.youtube.com/watch?v=hNCmb-4oXJA" class="card-link">Trailer</a>
-  </div>
-</div>
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-      <strong>Intersteller</strong>
-      </button>
-    </h2>
-    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <div class="accordion-body"> 
- <div class="card" style="width: 18rem;">
-  <img src="https://i.pinimg.com/originals/11/1c/5c/111c5c9ad99661af2d80e38948cf29d8.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <a href="https://www.youtube.com/watch?v=zSWdZVtXT7E">Trailer</a>
-  </div>
-</div>
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-        <strong>Life Itself</strong>
-      </button>
-    </h2>
-    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <div class="accordion-body"> 
-     <div class="card" style="width: 18rem;">
-  <img src="https://cdn.traileraddict.com/content/amazon-studios/life-itself-poster-5.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <a href="https://www.youtube.com/watch?v=b5kwtJkUdpA">Trailer</a>
-      </div>
-    </div>
-  </div>
-</div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-  <div id="movieChart"></div>
-    </div>
-  </div>
-  
       <script>
-      // Initialize Typed.js
-      var options = {
-        strings: ["Welcome to My Favorite Movies!", "Explore the world of cinema.", "Discover exciting trailers."],
-        typeSpeed: 50,
-        backSpeed: 30,
-        backDelay: 1000,
-        startDelay: 500,
-        showCursor: true,
-        cursorChar: '|',
-        loop: true
-      };
+        let text = "Fun fact, in the movie Intersteller, the black hole they travel through would be around " + toCelsius(-459.67) + " degrees Celsius.";
+        document.getElementById("demo").innerHTML = text;
 
-      var typed = new Typed('#typed-demo', options);
-     
+        function toCelsius(fahrenheit) {
+          return (5/9) * (fahrenheit-32);
+        } 
+      </script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+      <div class="accordion" id="accordionExample">
+        <!-- ... Your existing movie entries ... -->
+      </div>
+
+      <div id="movieChart"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   </body>
 </html>
