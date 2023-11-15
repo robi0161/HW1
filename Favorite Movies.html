@@ -10,6 +10,8 @@
   <body>
     <div class="container">
     <h1>My Favorite Movies</h1>
+      
+    <div id="movieChart"></div>
       <body>
 
 <p id="demo"></p>
@@ -25,30 +27,28 @@ function toCelsius(fahrenheit) {
 
 </body>
 <script>
-  // Wrap the code in a function that runs after the DOM has loaded
-  document.addEventListener("DOMContentLoaded", function () {
-    // Sample data for the chart
-    var moviesData = [
-      { name: "Black Panther", rating: 8.0 },
-      { name: "Us", rating: 7.4 },
-      { name: "Interstellar", rating: 8.6 },
-      { name: "Life Itself", rating: 6.7 }
-    ];
+    document.addEventListener("DOMContentLoaded", function () {
+      // Sample data for the chart
+      var moviesData = [
+        { name: "Black Panther", rating: 8.0 },
+        { name: "Us", rating: 7.4 },
+        { name: "Interstellar", rating: 8.6 },
+        { name: "Life Itself", rating: 6.7 }
+      ];
 
-    // Animation effect for every movie card using Anime.js
-    anime({
-      targets: '.card',
-      rotate: '1turn', // Rotate each card by 360 degrees
-      duration: 1000, // Duration of the animation in milliseconds
-      delay: anime.stagger(100) // Stagger the start of each card animation
+      // Animation effect for every movie card using Anime.js
+      anime({
+        targets: '.card',
+        rotate: '1turn', // Rotate each card by 360 degrees
+        duration: 1000, // Duration of the animation in milliseconds
+        delay: anime.stagger(100) // Stagger the start of each card animation
+      });
+
+      // Set up the SVG container using D3.js for the bar chart (as in the previous example)
+
+      // ... your D3.js code for the bar chart ...
     });
-
-    // Set up the SVG container using D3.js for the bar chart (as in the previous example)
-
-    // ... your D3.js code for the bar chart ...
-
-  });
-</script>
+  </script>
   <div class="accordion" id="accordionExample">
   <div class="accordion-item">
     <h2 class="accordion-header">
