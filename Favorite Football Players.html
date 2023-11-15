@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>  
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-</head>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
   <body>
      <div class="container">
     <h1>Favorite Football Players</h1>
@@ -48,6 +49,37 @@
   <img src="https://www.yorkdispatch.com/gcdn/presto/2021/09/13/PPYD/a445d87f-027c-4be6-9f3b-b9b2bf6c7ee2-AP21256604387740.jpg" class="card-img-top" alt="...">
   <div class="card-body">
   </div>
+      <canvas id="myChart"></canvas>
+
+    <script>
+      // Sample data for the chart
+      var playerNames = ["Odell Beckham Jr", "Julio Jones", "Lamar Jackson", "Jalen Ramsey", "Saquon Barkley"];
+      var playerRatings = [90, 88, 87, 92, 89];
+
+      // Create a bar chart using Chart.js
+      var ctx = document.getElementById('myChart').getContext('2d');
+      var myChart = new Chart(ctx, {
+        type: 'bar',
+         data: {
+          labels: playerNames,
+          datasets: [{
+            label: 'Player Ratings',
+            data: playerRatings,
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+         });
+    </script>
 </div>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   </body>
 </html>
