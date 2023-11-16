@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.all.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -87,7 +87,8 @@
   <div id="movieChart"></div>
     </div>
   </div>
-       
+        <button class="btn btn-primary" onclick="showSweetAlert()">Show SweetAlert2</button>
+  </div>
  
 
       <script>
@@ -97,7 +98,22 @@ document.getElementById("demo").innerHTML = text;
 function toCelsius(fahrenheit) {
   return (5/9) * (fahrenheit-32);
 } 
+ function showSweetAlert() {
+      Swal.fire({
+        title: 'Hello!',
+        text: 'This is a SweetAlert2 alert.',
+        icon: 'success',
+        confirmButtonText: 'Cool!'
+      });
+    }
 </script>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      AOS.init();
+    });
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   </body>
